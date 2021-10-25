@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 注册的对象默认是单例   -->
+    <bean id="carSingleton" class="com.jxd.spring5.Car">
+        <property name="id" value="99999"/>
+        <property name="color" value="proper"/>
+    </bean>
+
+    <!-- 设置对象为非单例  -->
+    <bean id="carPrototype" class="com.jxd.spring5.Car" scope="prototype"/>
+</beans>

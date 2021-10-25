@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置User对象创建 -->
+    <bean id="user" class="com.jxd.spring5.User"/>
+
+    <!--  使用set方法注入属性   -->
+    <bean id="book1" class="com.jxd.spring5.Book">
+        <property name="title" value="fiction"/>
+    </bean>
+
+     <!--  使用有参构造注入属性  -->
+    <bean id="book2" class="com.jxd.spring5.Book">
+        <constructor-arg name="title" value="fiction1"/>
+    </bean>
+
+     <!-- p名称空间注入(简化xml配置)    -->
+    <bean id="book3" class="com.jxd.spring5.Book" p:title="fiction2"/>
+</beans>
