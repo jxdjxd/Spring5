@@ -1,6 +1,7 @@
 package com.jxd.spring5;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,6 +12,7 @@ public class Student {
     private int[] score;
     private ArrayList<String> info;
     private Map<String, Integer> subjects;
+    private List<Car> cars;
 
     public Student(int[] score, ArrayList<String> info, Map<String, Integer> subjects) {
         this.score = score;
@@ -43,5 +45,13 @@ public class Student {
 
     public void setSubjects(Map<String, Integer> subjects) {
         this.subjects = subjects;
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 }

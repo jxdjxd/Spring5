@@ -22,5 +22,21 @@
                 <entry key="programing" value="12"/>
             </map>
         </property>
+        <!-- 集合中是对象 -->
+        <property name="cars">
+            <list>
+                <ref bean="car1"/>
+                <ref bean="car2"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="car1" class="com.jxd.spring5.Car">
+        <property name="id" value="1212"/>
+        <property name="color" value="dark"/>
+    </bean>
+    <bean id="car2" class="com.jxd.spring5.Car">
+        <property name="id" value="1212"/>
+        <property name="color" value="proper"/>
     </bean>
 </beans>
